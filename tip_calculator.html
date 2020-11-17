@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tip Calculator</title>
+	<link rel="stylesheet" type="text/css" href="tip_calculator.css">
+</head>
+<body>
+
+	<div class="container">
+			<div class="header">
+				<h2>TIP CALCULATOR</h2>
+			</div>
+			<form>
+				<p><b>Enter the bill amount?</b></p>
+				<input type="number" id ="amount" placeholder="Bill Amount" maxlength="9">
+				<p><b>How much would you like to tip?</b></p>
+				<select id ="tip">
+					<option disabled selected value="0">~ Choose an Option ~</option>
+					<option value="0.05">Average - 5%</option>
+					<option value="0.1">Good - 10%</option>
+					<option value="0.15">Very Good - 15%</option>
+					<option value="0.2">excellent - 20%</option>
+					<option value="0.3">Overwhelmed - 30%</option>
+				</select>
+				<p><b>No. of people sharing the bill?</b></p>
+				<input type="number" id="numberPeople">
+			</form>
+			<button class="calc" onClick="calculateTip()">Calculate</button>
+			<div id="single">
+				<p><b>Tip Amount:- Rs.<span id="tipAmount"></span></b></p>
+				<p><b>Total Bill:- Rs.<span id="billTotal"></span></b></p>
+			</div>
+			<div id="multiple">
+				<p><b>Tip per person:- Rs. <span id="totalTipMultiple"></span></b></p>
+				<p><b>Total per person:- Rs.<span id="totalAmountEach"></span></b></p>
+				<p><b>Bill Total:- Rs.<span id="billTotalMultiple"></span></b></p>
+			</div>
+	</div>
+	<script src="tip_calculator.js"></script>
+</body>
+</html>
